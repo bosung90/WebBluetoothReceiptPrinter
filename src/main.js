@@ -26,6 +26,31 @@ const DeviceProfiles = [
 		language:			'esc-pos',
 		codepageMapping:	'epson'
 	},
+	
+	/* Bixolon */
+	{
+		filters: [ 
+			{ 
+				services: 	[ '00005500-d102-11e1-9b23-74f07d000000' ] 
+			} 
+		],
+		
+		functions: {
+			'print':		{
+				service: 		'00005500-d102-11e1-9b23-74f07d000000',
+				characteristic:	'00005503-d102-11e1-9b23-74f07d000000'
+			},
+
+			'notify':		{
+				service: 		'00005500-d102-11e1-9b23-74f07d000000',
+				characteristic:	'00005502-d102-11e1-9b23-74f07d000000'
+			}
+
+		},
+
+		language: 'esc-pos',
+		codepageMapping: 'bixolon'
+	},
 
 	/* Star SM-L series, for example the SM-L200 */
 	{
